@@ -12,7 +12,8 @@ sns.set()
 
 #%%
 
-df = yf.download("SPY", start="2010-01-01", end="2020-01-01")
+df = pd.read_csv("data/IVE_bidask1min.txt", sep=',', infer_date_format=True)
+
 
 # %%
 df.plot(y="Adj Close")
